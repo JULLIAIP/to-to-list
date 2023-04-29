@@ -1,22 +1,22 @@
 import { Request, Response } from "express";
+import selectUserById from "../data/selectUser";
 
-export default async functionnomeDoEndpoint  (req: Request, res: Response) {
+export async function getUserById(req: Request, res: Response) {
 
     try {
         //validar entradas
 
         //consulta banco
-        const result = await 
-        
-        //validar saidas
-         if (!user) {
 
-            throw new Error('message')
+        const user = await selectUserById(req.params.id)
+        //corrigir o banco pra aceitar o envio sem ID
+
+
+        if (!user) {
+
+            throw new Error()
         }
-
-        //enviar resposta
-        res.send(result).status(200)
-
+        res.send(user).status(200)
     } catch (error: unknown) {
 
         if (error instanceof Error) {
