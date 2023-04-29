@@ -1,6 +1,17 @@
-PUT http://localhost:3003
+POST http://localhost:3003/user
 Content-Type: application/json
 
 {
     "name":"jullia", "nickname":"julliaip", "email":"jullia@gmail.com"
+}
+
+###
+http://localhost:3003/user/1
+
+###
+PUT http://localhost:3003/user/1
+Content-Type: application/json
+
+{ 
+    "email":"jullia@gmail.com"
 }

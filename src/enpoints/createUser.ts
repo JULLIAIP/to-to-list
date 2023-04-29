@@ -13,6 +13,7 @@ export default async function CreateUser(req: Request, res: Response) {
             throw new Error()
         }
 
+
         //consulta banco
         //corrigir o banco pra aceitar o envio sem ID
 
@@ -21,17 +22,16 @@ export default async function CreateUser(req: Request, res: Response) {
         //validar saidas
 
         //enviar resposta
-        const result = ''
 
-        if (!result) {
-            throw new Error()
+
+        res.send(message).status(status).end()
+
+    } catch (error: unknown) {
+
+        if (error instanceof Error) {
+            res.status(400).send(error.message);
+        } else {
+            res.status(500).send("An unknown error occurred.");
         }
-
-        res.send(message).status(status).end()
-
-    } catch (error) {
-
-        res.send(message).status(status).end()
-
     }
 }
