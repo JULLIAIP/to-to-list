@@ -1,1 +1,23 @@
-http://localhost:3003/
+GET http://localhost:3003/users
+
+###
+POST http://localhost:3003/users
+Content-Type: application/json
+
+
+{
+    "name":"NOVO USER",
+    "nickname":"USER",
+    "email":"USERa@email.com"
+}
+###
+PUT http://localhost:3003/users/1
+Content-Type: application/json
+
+
+{
+    "name":"NOVA JULLIA"
+}
+
+###
+DELETE http://localhost:3003/users/1
