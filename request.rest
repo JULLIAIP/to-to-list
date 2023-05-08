@@ -1,0 +1,23 @@
+GET http://localhost:3003/users?user=4
+
+###
+POST http://localhost:3003/users
+Content-Type: application/json
+
+
+{
+    "name":"jullia",
+    "nickname":"jullianova",
+    "email":"jullianova@email.com"
+}
+###
+PUT http://localhost:3003/users/1
+Content-Type: application/json
+
+
+{
+    "name":"NOVA JULLIA"
+}
+
+###
+DELETE http://localhost:3003/users/1
