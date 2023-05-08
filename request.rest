@@ -1,4 +1,4 @@
-GET http://localhost:3003/users
+GET http://localhost:3003/users?user=4
 
 ###
 POST http://localhost:3003/users
@@ -6,9 +6,9 @@ Content-Type: application/json
 
 
 {
-    "name":"NOVO USER",
-    "nickname":"USER",
-    "email":"USERa@email.com"
+    "name":"jullia",
+    "nickname":"jullianova",
+    "email":"jullianova@email.com"
 }
 ###
 PUT http://localhost:3003/users/1
